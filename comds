@@ -1,0 +1,136 @@
+Ran command: List directories in Videos (`Get-ChildItem -Path "c:\Users\ChandraShekharRana\Videos" -Directory`)
+
+Checking directories in the workspace.
+
+Ran command: List repos directory (`Get-ChildItem -Path "c:\Users\ChandraShekharRana\Videos\repos"`)
+
+Checking contents of `repos`.
+
+Ran command: List ponytail files (`Get-ChildItem -Path "c:\Users\ChandraShekharRana\Videos\repos\ponytail"`)
+
+Inspecting `ponytail` repository.
+
+Viewed README.md:1-40
+Viewed README.md:41-100
+Ran command: List ponytail commands (`Get-ChildItem -Path "c:\Users\ChandraShekharRana\Videos\repos\ponytail\commands"`)
+
+Inspecting commands in `ponytail`.
+
+Ran command: List taste-skill files (`Get-ChildItem -Path "c:\Users\ChandraShekharRana\Videos\repos\taste-skill"`)
+
+Inspecting `taste-skill`.
+
+Viewed README.md:1-35
+Viewed README.md:36-90
+Viewed README.md:1-40
+Viewed README.md:1-40
+Viewed c:\Users\ChandraShekharRana\Videos\repos\rea\README.md:2-31
+Ran command: List rea files (`Get-ChildItem -Path "c:\Users\ChandraShekharRana\Videos\repos\rea"`)
+
+Inspecting `rea` folder.
+
+Aapke machine (`c:\Users\ChandraShekharRana\Videos`) par jo **Installed Repos, Skills aur MCP Toolkits** hain, unki complete list, unka purpose aur unhe prompts me kaise use karna hai, yaha detailed breakdown hai:
+
+---
+
+### 📦 Installed Repositories & Toolkits Overview
+
+| Repository / Toolkit | Category | Core Purpose | Primary Slash Command / Trigger |
+| :--- | :--- | :--- | :--- |
+| **`graphify`** | Architecture & Radar | Zero-blind search, dependency graphs, impact analysis | `/graphify query`, `graphify affected` |
+| **`ponytail`** | Senior Dev & Execution | Minimal code, zero boilerplate, 98% test coverage, anti-overengineering | `/ponytail ultra`, `/ponytail-audit` |
+| **`taste-skill`** | UI/UX & Art Direction | Premium aesthetics, kills generic AI-slop, editorial layouts & typography | `/design-taste-frontend` |
+| **`gstack`** | Virtual Startup Team (YC) | Automated QA, code review, CEO product framing, automated shipping | `/qa`, `/review`, `/ship`, `/office-hours`, `/cso` |
+| **`awesome-design-md`**| Design System Tokens | 80+ curated `DESIGN.md` specs (Linear, Stripe, Apple-style design tokens) | Reference in prompt (`DESIGN.md`) |
+| **`rea`** | App Security & Reverse Eng | APK analysis, Frida instrumentation, ADB device control, network inspect | MCP tools (`adb_*`, `frida_*`, `inspect_*`) |
+
+---
+
+### 🛠️ Har Repo Ka Detail & Prompt Me Use Karne Ka Tareeqa
+
+---
+
+#### 1. 🔍 Graphify (`graphify`)
+* **Kya karta hai:** Pure codebase ka 360-degree knowledge graph banata hai. File grep karne ke bajaye exact call-trees, models, serializers aur state transitions seconds me nikaalta hai.
+* **Kab use karein:** Jab kisi component/model me change karna ho aur dekhna ho ki doosri screens par kya impact hoga.
+* **Prompt Me Kaise Use Karein:**
+  ```markdown
+  Pehle Graphify se trace karo: `graphify query "How does DiscussionDetail load replies?"`
+  Aur `graphify affected "Discussion"` check karke batao kaunse components update honge.
+  ```
+
+---
+
+#### 2. ⚡ Ponytail (`ponytail`)
+* **Kya karta hai:** *"The Senior Developer"* — Yeh 50 lines ka bulky code likhne ke bajaye 5-10 clean lines likhta hai jo 100% reliable hoti hain. Token consumption aur clutter -45% kam karta hai.
+* **Commands:**
+  - `/ponytail ultra <task>`: Deepest quality code, error-free execution.
+  - `/ponytail-audit`: Dead code aur over-engineered libraries scan karke hatata hai.
+  - `/ponytail-review`: Senior dev level code inspection.
+  - `/ponytail-debt`: Tech debt reduce karne ke liye.
+* **Prompt Me Kaise Use Karein:**
+  ```markdown
+  /ponytail ultra
+  Auth screen me remember me checkbox add karo. Zero unnecessary libraries, clean TypeScript types, aur robust error handling.
+  ```
+
+---
+
+#### 3. 🎨 Taste Skill (`taste-skill` / `design-taste-frontend`)
+* **Kya karta hai:** AI ka boring, standard landing page look ("AI slop") khatam karke bespoke, editorial, modern UI banata hai (glassmorphism, subtle borders, high-contrast typography, balanced spacing).
+* **Prompt Me Kaise Use Karein:**
+  ```markdown
+  /design-taste-frontend
+  Hamaare profile card aur feed cards ko redesign karo. Modern campus social vibe chahiye, smooth dark mode colors aur authentic visual hierarchy ke saath.
+  ```
+
+---
+
+#### 4. 🏢 GStack (`gstack` — Garry Tan / Y Combinator Factory)
+* **Kya karta hai:** Pure startup team ke roles provide karta hai:
+  - `/office-hours`: Founder/CEO perspective se product rethink karta hai.
+  - `/review`: Production-breaking bugs find karta hai jo CI pass kar jaate hain.
+  - `/qa`: Real browser open karke staging/local URL par UI aur APIs test karta hai.
+  - `/cso`: Chief Security Officer security audit (OWASP Top 10 + STRIDE).
+  - `/ship`: Tests run karta hai, PR ready karta hai.
+* **Prompt Me Kaise Use Karein:**
+  ```markdown
+  /qa
+  Test our login flow at http://localhost:8081 — try entering an invalid roll number and verify if the red error banner pops up correctly.
+  ```
+  ```markdown
+  /review
+  Review all recent changes on git branch and find any unhandled edge-cases or memory leaks.
+  ```
+
+---
+
+#### 5. 💎 Awesome DESIGN.md (`awesome-design-md`)
+* **Kya karta hai:** Linear, Stripe, Raycast, Vercel jaisi top-tier design-driven companies ke 80+ curated design systems (`DESIGN.md`) ka collection hai.
+* **Prompt Me Kaise Use Karein:**
+  ```markdown
+  awesome-design-md se Linear ya Raycast style design language uthao aur hamaare CampusConnect mobile dark mode theme tokens me apply karo.
+  ```
+
+---
+
+#### 6. 🔬 REA (`rea` — Reverse Engineering Agent)
+* **Kya karta hai:** Native apps ki deep debugging, ADB device connectivity, logcat reading, package pulling, aur dynamic analysis.
+* **Prompt Me Kaise Use Karein:**
+  ```markdown
+  rea tool use karke connected Android phone/emulator ka screen capture karo aur check karo ki app crash ka logcat kya bol raha hai.
+  ```
+
+---
+
+### 🚀 The Ultimate "Power Combo" Prompt Template
+Sabhi repos ko ek sath mila kar run karne ka best formula:
+
+```markdown
+/ponytail ultra
+
+1. ARCHITECTURE: Graphify se `graphify affected "authService"` check karo taaki koi contract break na ho.
+2. DESIGN: `/design-taste-frontend` aur `awesome-design-md` styling rules follow karo (clean card elevations, 0 AI slop, perfect dark mode contrast).
+3. EXECUTION: Ponytail standard par clean, robust code likho bina kisi unnecessary dependency ke.
+4. QUALITY: `/review` chala kar edge cases verify karo.
+```
